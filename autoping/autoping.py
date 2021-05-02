@@ -4,7 +4,7 @@ from discord.ext import commands
 class AutoPing(commands.Cog):
   def __init__(self, bot):
     self.bot = bot
-    self.ids = [561906912690438175]
+    self.ids = [561906912690438175, 801237878763290624, 330915985886543873]
 
   @commands.Cog.listener()
   async def on_message(self, message):
@@ -15,9 +15,25 @@ class AutoPing(commands.Cog):
 
     for mention in mentions:
       if mention.id in self.ids:
+        
+        subject = ""
+        link = ""
+
+        if mention.id == 561906912690438175: # Kristen, Physics Mech
+          subject = "physics"
+          link = "https://5able.me/physics-mech-cram-finale"
+
+        elif mention.id == 801237878763290624 # Amrita, Gov
+          subject = "government"
+          link = "https://5able.me/us-gov-cram-finale"
+
+        elif mention.id == 330915985886543873 # Dani, Physics E & M
+          subject = "physics"
+          link = "https://5able.me/physics-cem-cram-finale"
+
         embed = discord.Embed(
           title=":wave: Need some extra support?",
-          description="I saw that you mentioned a physics Subject TA. If you need some extra support, you can submit questions for discussion [here](https://5able.me/physics-mech-cram-finale).",
+          description=f"I saw that you mentioned a {subject} Subject TA. If you need some extra support, you can submit questions for discussion [here]({link}).",
           color=5093832
         )
         await message.channel.send(embed=embed)

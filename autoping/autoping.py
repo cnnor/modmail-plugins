@@ -23,11 +23,11 @@ class AutoPing(commands.Cog):
           subject = "physics"
           link = "https://5able.me/physics-mech-cram-finale"
 
-        elif mention.id == 801237878763290624 # Amrita, Gov
+        elif mention.id == 801237878763290624: # Amrita, Gov
           subject = "government"
           link = "https://5able.me/us-gov-cram-finale"
 
-        elif mention.id == 330915985886543873 # Dani, Physics E & M
+        elif mention.id == 330915985886543873: # Dani, Physics E & M
           subject = "physics"
           link = "https://5able.me/physics-cem-cram-finale"
 

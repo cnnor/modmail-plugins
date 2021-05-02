@@ -4,7 +4,7 @@ from discord.ext import commands
 class AutoPing(commands.Cog):
   def __init__(self, bot):
     self.bot = bot
-    self.ids = [561906912690438175, 801237878763290624, 330915985886543873, 410165721851756554]
+    self.ids = [561906912690438175, 801237878763290624, 330915985886543873]
 
   @commands.Cog.listener()
   async def on_message(self, message):
@@ -30,10 +30,6 @@ class AutoPing(commands.Cog):
         elif mention.id == 330915985886543873: # Dani, Physics E & M
           subject = "physics"
           link = "https://5able.me/physics-cem-cram-finale"
-
-        elif mention.id == 410165721851756554: # Harrison, Testing
-          subject = "HARRISON"
-          link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 
         embed = discord.Embed(
           title=":wave: Need some extra support?",

@@ -31,7 +31,7 @@ class AutoPing(commands.Cog):
           subject = "physics"
           link = "https://5able.me/physics-cem-cram-finale"
 
-        elif mention.id == 410165721851756554 # Harrison, Testing
+        elif mention.id == 410165721851756554: # Harrison, Testing
           subject = "HARRISON"
           link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 

@@ -4,7 +4,7 @@ from discord.ext import commands
 class AutoPing(commands.Cog):
   def __init__(self, bot):
     self.bot = bot
-    self.ids = [700915834020954183, 592530158284439595, 410165721851756554]
+    self.ids = [700915834020954183, 410165721851756554]
 
   @commands.Cog.listener()
   async def on_message(self, message):
@@ -22,10 +22,6 @@ class AutoPing(commands.Cog):
         if mention.id == 700915834020954183: # JP, Calc AB
           subject = "Calculus AB"
           link = "https://5able.me/calc-ab-finale"
-
-        elif mention.id == 592530158284439595: # Pooja, Calc BC
-          subject = "Calculus BC"
-          link = "https://5able.me/calc-bc-finale"
 
         elif mention.id == 410165721851756554: # Harrison APHuG
           subject = "APHuG"

@@ -20,4 +20,4 @@ class CrackerBargel(commands.Cog):
       await message.channel.send(random.choice(self.messages))
 
 def setup(bot):
-  bot.add_cog(Welcomer(bot))
+  bot.add_cog(CrackerBargel(bot))

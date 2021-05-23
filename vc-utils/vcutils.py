@@ -23,7 +23,7 @@ class VCUtils(commands.Cog):
     if "f!unmute" in message.content:
       if message.mentions == []:
         return message.channel.send("Sorry, but you have to mention someone for me to mute them!");
-      await message.mentions[0].edit(mute=True)
+      await message.mentions[0].edit(mute=False)
 
 def setup(bot):
   bot.add_cog(VCUtils(bot))

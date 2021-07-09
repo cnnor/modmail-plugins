@@ -60,7 +60,7 @@ class Welcomer(commands.Cog):
   async def disable(self, ctx):
     """Disable the welcome message."""
 
-    self.enabed = False
+    self.enabled = False
     await ctx.send(embed=discord.Embed(description="Successfully disabled the welcomer plugin."))
 
   @welcomer.command()
@@ -121,8 +121,11 @@ class Welcomer(commands.Cog):
 
   @commands.Cog.listener()
   async def on_member_join(self, member):
-    embed=discord.Embed.from_dict(self.message)
-    await member.send(embed=embed)
+    try:
+      embed=discord.Embed.from_dict(self.message)
+      await member.send(embed=embed)
+    except:
+      pass
 
 def setup(bot):
   bot.add_cog(Welcomer(bot))
